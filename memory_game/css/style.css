@@ -1,8 +1,13 @@
 body {
     text-align: center;
     margin: 0;
-    display: flex; 
+    display: flex;
     flex-direction: column;
+}
+
+html,
+body {
+    height: 100%;
 }
 
 a {
@@ -10,8 +15,6 @@ a {
     color: #f15b31;
     font-weight: 600;
     font-size: 18px;
-    /* margin: 0 20px; */
-    /* border-bottom: 2px solid transparent; */
 }
 
 h1 {
@@ -50,11 +53,15 @@ footer {
     align-self: flex-end;
     width: 100%;
     box-sizing: border-box;
+    flex-shrink: 0;
+    white-space: nowrap;
+
 }
 
 main {
     width: 850px;
-    margin: 35px auto;
+    margin: 100px auto;
+    flex: 1 0 auto;
 }
 
 img {
@@ -65,17 +72,24 @@ nav {
     background-color: #00A6B3;
     color: #FFFFFF;
     padding: 20px 0 20px 0;
-    
 }
 
-/* nav:hover {
-    background-color: white;
-} */
-
-h1, h2, a {
+h1,
+h2,
+a,
+span {
     text-transform: uppercase;
     font-family: "Raleway";
     letter-spacing: 1px;
+}
+
+span {
+    color: #f15b31;
+    font-weight: 800;
+}
+
+address {
+    padding-bottom: 10px;
 }
 
 .nav {
@@ -95,10 +109,6 @@ h1, h2, a {
     float: right;
 }
 
-.info {
-    /* float: clear; */
-    clear: left;
-}
 
 .clearfix::after {
     visibility: hidden;
@@ -117,4 +127,8 @@ h1, h2, a {
 a:hover {
     background-color: white;
     border-bottom: 2px solid transparent;
+}
+
+#game-board {
+    cursor: pointer;
 }
